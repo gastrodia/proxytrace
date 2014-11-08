@@ -1,0 +1,22 @@
+{
+  "name": "ProxyAttacker",
+  "version": "0.0.0",
+  "description": "ProxyAttacker\r =============",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gastrodia/ProxyAttacker.git"
+  },
+  "author": "",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/gastrodia/ProxyAttacker/issues"
+  },
+  "homepage": "https://github.com/gastrodia/ProxyAttacker",
+  "dependencies": {
+    "http-proxy": "^1.6.1"
+  }
+}
