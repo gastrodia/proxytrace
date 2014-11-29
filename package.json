@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/gastrodia/proxytrace",
   "dependencies": {
+    "chalk": "^0.5.1",
+    "commander": "^2.5.0",
     "http-proxy": "^1.6.1"
   },
-  "bin":{
-    "proxytrace":"proxytrace.js"
+  "bin": {
+    "proxytrace": "proxytrace.js"
   }
 }
