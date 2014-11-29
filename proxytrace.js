@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * Created by Yang on 2014/11/8.
  */

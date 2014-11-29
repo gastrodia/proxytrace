@@ -1,22 +1,25 @@
 {
-  "name": "ProxyAttacker",
+  "name": "proxytrace",
   "version": "0.0.0",
-  "description": "ProxyAttacker\r =============",
+  "description": "try proxy trace with nodejs ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gastrodia/ProxyAttacker.git"
+    "url": "https://github.com/gastrodia/proxytrace.git"
   },
   "author": "",
   "license": "Apache",
   "bugs": {
-    "url": "https://github.com/gastrodia/ProxyAttacker/issues"
+    "url": "https://github.com/gastrodia/proxytrace/issues"
   },
-  "homepage": "https://github.com/gastrodia/ProxyAttacker",
+  "homepage": "https://github.com/gastrodia/proxytrace",
   "dependencies": {
     "http-proxy": "^1.6.1"
+  },
+  "bin":{
+    "proxytrace":"proxytrace.js"
   }
 }
