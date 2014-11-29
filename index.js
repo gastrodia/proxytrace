@@ -12,6 +12,15 @@ var http      = require('http');
 var httpProxy = require('http-proxy');
 
 
+/*
+
+实现方式：
+ todo 是不是可以把它封装为一个命令行工具
+1.host ip临时替换
+2.端口代理
+用法 ： ptrace 8020 https://emea.universal-api.travelport.com
+ */
+
 var proxy = httpProxy.createProxy();
 
 var reqAnalyze = function(req){
