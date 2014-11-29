@@ -29,11 +29,14 @@ var reqAnalyze = function(req){
 }
 
 var proxyServer = http.createServer(function(req, res) {
-        reqAnalyze(req);
-        proxy.web(req, res, {
-            target: 'https://emea.universal-api.travelport.com'
-        });
-
+    reqAnalyze(req);
+    proxy.web(req, res, {
+        target: 'https://emea.universal-api.travelport.com'
+    });
+    proxy.on('proxyRes', function (proxyRes, req, res) {
+        console.log('success_bak:');
+        console.log(res.body);
+    });
 });
 
 var port = 8020;
