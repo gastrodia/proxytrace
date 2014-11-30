@@ -1,6 +1,6 @@
 {
   "name": "proxytrace",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "try proxy trace with nodejs ",
   "main": "index.js",
   "scripts": {

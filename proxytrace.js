@@ -28,29 +28,26 @@ if(!program.port || !program.target) {
 function main(){
     var proxy = httpProxy.createProxy();
 
-    var reqAnalyze = function(req){
-        if(req.url.indexOf('uAPI')>-1){
-            console.log('url: %s', req.url);
-            console.log('method: %s',req.method);
-            var data = '';
-            req.on('data',function(chunk){
-                data += chunk;
-            });
-            req.on('end',function(){
-                console.log('data: %s',data);
-            })
-        }
-    }
+
 
     var proxyServer = http.createServer(function(req, res) {
-        reqAnalyze(req);
+        console.log('url: %s', req.url);
+        console.log('method: %s',req.method);
+        var data = '';
+        req.on('data',function(chunk){
+            data += chunk;
+        });
+        req.on('end',function(){
+            console.log('data: %s',data);
+        })
         proxy.web(req, res, {
             target: program.target
         });
         proxy.on('proxyRes', function (proxyRes, req, res) {
-            console.log('success_bak:');
+            console.log('response body:');
             console.log(res.body);
         });
+
     });
     proxyServer.listen(program.port);
     console.log(chalk.magenta.bold('proxytrace is listen on ' + program.port));
